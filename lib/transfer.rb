@@ -29,7 +29,7 @@ class Transfer
     if status == "complete"
       @receiver.withdraw(amount)
       @sender.deposit(amount)
-      status = "reversed"
+      @status = "reversed"
     end
   end
   
