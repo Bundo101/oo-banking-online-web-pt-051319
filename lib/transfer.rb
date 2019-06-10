@@ -26,7 +26,9 @@ class Transfer
   end
   
   def reverse_transfer
-    
+    if status == "complete"
+      @receiver.withdraw(amount)
+      @sender.deposit(amount)
   end
   
 end
